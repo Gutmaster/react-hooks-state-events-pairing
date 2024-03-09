@@ -1,3 +1,6 @@
+import React from "react";
+import Info from "./Info.js";
+import Controls from "./Controls.js";
 import video from "../data/video.js";
 
 function App() {
@@ -13,6 +16,8 @@ function App() {
         allowFullScreen
         title="Thinking in React"
       />
+      <Info title={video.title} views={video.views} date={video.createdAt}/>
+      <Controls commentData={video.comments}/>
     </div>
   );
 }
